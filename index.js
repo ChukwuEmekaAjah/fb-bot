@@ -12,8 +12,8 @@ var request = require('request'),
 
 var app = express();
 
-var pat = '';
-var valtoken = '';
+var pat = 'EAAIVIAxrOHUBACbycihWOU0SFeeTrhLzlCs2JwyrWzCFUEyg48HQ25IS6pL6G3KZBq5SDpzZA66lVQPwyZCwhHqJ6evSnOpogVRZAULig0cY4S3ld8Fk7HdKlNHD9t2stpAQmgKblFLJZCSTHhF7EdnPdyHLPLHPVBPOsses9gQZDZD';
+var valtoken = 'thisismycoolbot';
 
 app.get('/',function(req,res){
 	res.send('Hello from the other side. Adios!');
@@ -174,3 +174,4 @@ function callSendAPI(messageData) {
   });  
 }
 
+app.listen('5000')
