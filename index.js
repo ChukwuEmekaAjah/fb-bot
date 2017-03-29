@@ -1,17 +1,17 @@
 use strict'
 
-const express = require('express')
-const bodyParser = require('body-parser')
-const request = require('request')
-const app = express()
+const express = require('express');
+const bodyParser = require('body-parser');
+const request = require('request');
+const app = express();
 
-app.set('port', (process.env.PORT || 5000))
+app.set('port', (process.env.PORT || 5000));
 
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({extended: false}))
+app.use(bodyParser.urlencoded({extended: false}));
 
 // parse application/json
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
 // index
 app.get('/', function (req, res) {
@@ -49,7 +49,7 @@ app.post('/webhook/', function (req, res) {
 		}
 	}
 	res.sendStatus(200)
-})
+});
 
 
 // recommended to inject access tokens as environmental variables, e.g.
@@ -122,7 +122,7 @@ function sendGenericMessage(sender) {
 		} else if (response.body.error) {
 			console.log('Error: ', response.body.error)
 		}
-	})
+	});
 }
 
 // spin spin sugar
