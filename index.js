@@ -20,7 +20,7 @@ var valtoken = 'thisismycoolbot';
 app.get('/',function(req,res){
 	res.send('Hello from the other side. Adios!');
 })
-/*
+
 app.get('/webhook',function(req,res){
 	if (req.query['hub.mode'] === 'subscribe' &&
       req.query['hub.verify_token'] === valtoken) {
@@ -175,7 +175,7 @@ function callSendAPI(messageData) {
     }
   });  
 }
-*/
+
 app.listen(app.get('port'), function() {
   console.log('Node app is running on port', app.get('port'));
 });
