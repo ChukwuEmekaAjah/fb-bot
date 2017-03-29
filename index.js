@@ -30,7 +30,7 @@ app.get('/', function (req, res) {
 
 // for facebook verification
 app.get('/webhook/', function (req, res) {
-	if (req.query['hub.verify_token'] === 'my_voice_is_my_password_verify_me') {
+	if (req.query['hub.verify_token'] === 'thisismycoolbot') {
 		res.send(req.query['hub.challenge'])
 	} else {
 		res.send('Error, wrong token')
@@ -64,7 +64,7 @@ app.post('/webhook/', function (req, res) {
 
 // recommended to inject access tokens as environmental variables, e.g.
 // const token = process.env.FB_PAGE_ACCESS_TOKEN
-const token = "<FB_PAGE_ACCESS_TOKEN>"
+const token = "EAAd0gtyqqVYBAKOOd4wZCNgeXibGcfjwJiqe0ikC9tFHUTM4Tdi30F48s8Ej92vdtp6H0oW2782tzjs6qLNWAMuZBM6UwCExpQgd6EMmlJTZCCiNrJwd7NRv1KSYLNuEB0Kq6K98t7q9gGW9BZCdLIIQRKTdH3ZCVnZAPUwtWXRgZDZD"
 
 function sendTextMessage(sender, text) {
 	let messageData = { text:text }
