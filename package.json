@@ -1,0 +1,21 @@
+{
+  "name": "my messenger bot",
+  "version": "1.0.0",
+  "description": "I am just getting started with the Messenger Platform",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+
+  "author": "Chukwuemeka",
+
+  "dependencies": {
+    "body-parser": "^1.15.0",
+
+  "express": "^4.13.4",
+    "request": "^2.72.0"
+  },
+  "engines": {
+    "node": "~4.1.2"
+  }
+}
