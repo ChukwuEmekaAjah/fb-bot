@@ -30,8 +30,7 @@ app.set('port', process.env.PORT || 5000);
 const VALIDATION_TOKEN = 'thisismycoolbot';
 
 // Generate a page access token for your page from the App Dashboard
-const PAGE_ACCESS_TOKEN = 'EAAd0gtyqqVYBALMh0VbaTwIBvK0xFNA1RR6xiAQWmA86apIOSSOBeIdu4AenZBlPZBbJSmOdlA9hswli4LYYY2Sk34arhqdmxFYhMU223ZBvVn2amLZBWuudI8hjVF287AQTaO8dZByxN9dYh8nj4bO31nhsQWzeCFO2JWT8Y2gZDZD'
-
+const PAGE_ACCESS_TOKEN = 'EAAd0gtyqqVYBAKOOd4wZCNgeXibGcfjwJiqe0ikC9tFHUTM4Tdi30F48s8Ej92vdtp6H0oW2782tzjs6qLNWAMuZBM6UwCExpQgd6EMmlJTZCCiNrJwd7NRv1KSYLNuEB0Kq6K98t7q9gGW9BZCdLIIQRKTdH3ZCVnZAPUwtWXRgZDZD'
 // URL where the app is running (include protocol). Used to point to scripts and 
 // assets located at this address. 
 
