@@ -11,6 +11,7 @@ var request = require('request'),
 	https 	= require('https');
 
 var app = express();
+app.set('port',5000)
 
 var pat = 'EAAIVIAxrOHUBACbycihWOU0SFeeTrhLzlCs2JwyrWzCFUEyg48HQ25IS6pL6G3KZBq5SDpzZA66lVQPwyZCwhHqJ6evSnOpogVRZAULig0cY4S3ld8Fk7HdKlNHD9t2stpAQmgKblFLJZCSTHhF7EdnPdyHLPLHPVBPOsses9gQZDZD';
 var valtoken = 'thisismycoolbot';
@@ -174,4 +175,4 @@ function callSendAPI(messageData) {
   });  
 }
 
-app.listen('5000')
+app.listen(app.get('port'))
