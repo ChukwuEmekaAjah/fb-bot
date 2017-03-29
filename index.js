@@ -1,17 +1,27 @@
-use strict'
+//This is still work in progress
+/*
+Please report any bugs to nicomwaks@gmail.com
 
-const express = require('express');
-const bodyParser = require('body-parser');
-const request = require('request');
-const app = express();
+i have added console.log on line 48 
 
-app.set('port', (process.env.PORT || 5000));
+
+
+
+ */
+'use strict'
+
+const express = require('express')
+const bodyParser = require('body-parser')
+const request = require('request')
+const app = express()
+
+app.set('port', (process.env.PORT || 5000))
 
 // parse application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({extended: false}))
 
 // parse application/json
-app.use(bodyParser.json());
+app.use(bodyParser.json())
 
 // index
 app.get('/', function (req, res) {
@@ -20,7 +30,7 @@ app.get('/', function (req, res) {
 
 // for facebook verification
 app.get('/webhook/', function (req, res) {
-	if (req.query['hub.verify_token'] === 'thisismycoolbot') {
+	if (req.query['hub.verify_token'] === 'my_voice_is_my_password_verify_me') {
 		res.send(req.query['hub.challenge'])
 	} else {
 		res.send('Error, wrong token')
@@ -49,12 +59,12 @@ app.post('/webhook/', function (req, res) {
 		}
 	}
 	res.sendStatus(200)
-});
+})
 
 
 // recommended to inject access tokens as environmental variables, e.g.
 // const token = process.env.FB_PAGE_ACCESS_TOKEN
-const token = "EAAd0gtyqqVYBAKOOd4wZCNgeXibGcfjwJiqe0ikC9tFHUTM4Tdi30F48s8Ej92vdtp6H0oW2782tzjs6qLNWAMuZBM6UwCExpQgd6EMmlJTZCCiNrJwd7NRv1KSYLNuEB0Kq6K98t7q9gGW9BZCdLIIQRKTdH3ZCVnZAPUwtWXRgZDZD"
+const token = "<FB_PAGE_ACCESS_TOKEN>"
 
 function sendTextMessage(sender, text) {
 	let messageData = { text:text }
@@ -122,7 +132,7 @@ function sendGenericMessage(sender) {
 		} else if (response.body.error) {
 			console.log('Error: ', response.body.error)
 		}
-	});
+	})
 }
 
 // spin spin sugar
